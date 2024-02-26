@@ -2,9 +2,10 @@ const { PrismaClient } = require('@prisma/client')
 
 function StockReportDbClient() {
     const prisma = new PrismaClient()
-
+    let result = null;
     this.addStockRecord = async function(symbol,record){
-        const result = await prisma.stock_report.create({
+        console.log(record)
+        result = await prisma.stock_report.create({
             data: {
                 high: record.h,
                 low: record.l,

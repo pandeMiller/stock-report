@@ -1,8 +1,9 @@
 const finnhub = require('finnhub');
 
+const FINHUB_KEY_VAR = 'api_key'
 function FinnHubClient() {
-   let api_key = finnhub.ApiClient.instance.authentications['api_key'];
-    api_key.apiKey = "cnadcrhr01qg60jaeol0cnadcrhr01qg60jaeolg";
+   let api_key = finnhub.ApiClient.instance.authentications[FINHUB_KEY_VAR];
+    api_key.apiKey = process.env.FINHUB_API_KEY
     const finnhubClient = new finnhub.DefaultApi()
     let count = 0 ;
     this.getStockDetails = function(symbol,io_client_emit_func) {
