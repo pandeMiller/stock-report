@@ -1,0 +1,23 @@
+{
+  "name": "stock-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.10.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "finnhub": "^1.2.18",
+    "socket.io": "^4.7.4",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "prisma": "^5.10.2"
+  }
+}
