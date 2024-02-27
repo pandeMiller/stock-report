@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +14,12 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "finnhub": "^1.2.18",
+    "jest": "^29.7.0",
     "socket.io": "^4.7.4",
     "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "prisma": "^5.10.2"
   }
+  
 }

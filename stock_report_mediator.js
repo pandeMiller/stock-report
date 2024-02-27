@@ -3,11 +3,10 @@ function StockReportMediator(){
     let latestRecord = {}
     let addedStockRecord = null;
     this.processRecordForSymbol = function(symbol,record){
-        console.log(record)
         if (record.c !== latestRecord.c){
             latestRecord = record;
             addedStockRecord = stockReportDbClient.addStockRecord(symbol,record);
-            addedStockRecord.then(resolvedData => console.log(resolvedData))
+            // addedStockRecord.then(resolvedData => console.log(resolvedData))
         }
 
     }

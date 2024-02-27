@@ -11,7 +11,7 @@ const io = new Server(server, {
     }
   })
 
-const finnhubClient = require('./clients/finnhub')
+const finnhubClient = require('./clients/finnhub_client')
 
 const emitData = (symbol,data) => {
     io.emit('stockData',data)
