@@ -1,4 +1,10 @@
 const { PrismaClient } = require('@prisma/client')
+const lodash = require('lodash')
+const DATABASE_URL = process.env.DATABASE_URL
+
+if(lodash.isEmpty(DATABASE_URL)){
+    throw 'Database url is missing!'
+}
 
 function StockReportDbClient() {
     const prisma = new PrismaClient()
@@ -14,6 +20,17 @@ function StockReportDbClient() {
         
     })
     return result;
+    }
+    this.getStockRecordList = async function(symbol,startTime,endTime){
+        return prisma.stock_report.findMany({
+            where: {
+                symbol,
+                createdAt: {
+                    gt: startTime,
+                    lt: endTime
+                }
+            }
+        })
     }
 }
 module.exports=new StockReportDbClient()
