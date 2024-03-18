@@ -1,0 +1,1 @@
+This is the stock prices reporting service built on [express.js](https://expressjs.com/) for FAANG companines. It uses [Finnhub client API](https://finnhub.io/) to query qutoes the companies. The data is dispachted via [socket.io](https://socket.io/docs/v3/server-initialization/) using HTTP long polling. 
